@@ -1,7 +1,7 @@
 #pragma once
 #include "TrackList.h"
 
-class Album : TrackList
+class Album : public TrackList
 {
 private:
 	std::string artistName;
