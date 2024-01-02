@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "TrackList.h"
 
 TrackList::TrackList()
@@ -51,4 +52,21 @@ TrackList TrackList::operator+(const AudioFile& audioFile) const
 	TrackList result = *this;
 	result.add(audioFile);
 	return result;
+}
+
+bool TrackList::contains(const std::string& trackName) const
+{
+	bool result = false;
+	for (const AudioFile& track : list) {
+		if (track.getTrackName() == trackName) {
+			result = true;
+			break;
+		}
+	}
+	return result;
+}
+
+bool TrackList::contains(const AudioFile& audioFile) const
+{
+	return std::find(list.begin(), list.end(), audioFile) != list.end();
 }

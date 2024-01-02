@@ -52,6 +52,11 @@ int main()
 
     displayLists(lists);
 
+    // алгоритм поиска по треку
+    const std::string searchName = "Космос";
+    auto it = std::find_if(lists.begin(), lists.end(), [searchName](TrackList list) {
+        return list.contains(searchName);
+    });
 
-
+    std::cout << "Yo" << std::endl;
 }

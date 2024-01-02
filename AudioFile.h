@@ -33,8 +33,9 @@ public:
 
     void setTrackName(const std::string trackName);
 
-    std::string getArtistName();
-    std::string getTrackName();
-    int getDuration();
-    int getReleaseYear();
+    std::string getArtistName() const;
+    std::string getTrackName() const;
+    int getDuration() const;
+    int getReleaseYear() const;
+    bool operator==(const AudioFile& track);
 };

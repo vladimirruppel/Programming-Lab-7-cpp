@@ -42,24 +42,29 @@ int AudioFile::getTotalAudioFiles()
     return totalAudioFiles;
 }
 
-std::string AudioFile::getArtistName()
+std::string AudioFile::getArtistName() const
 {
     return artistName;
 }
 
-std::string AudioFile::getTrackName()
+std::string AudioFile::getTrackName() const
 {
     return trackName;
 }
 
-int AudioFile::getDuration()
+int AudioFile::getDuration() const
 {
     return duration;
 }
 
-int AudioFile::getReleaseYear()
+int AudioFile::getReleaseYear() const
 {
     return releaseYear;
+}
+
+bool AudioFile::operator==(const AudioFile& track)
+{
+    return artistName == track.artistName && trackName == track.trackName && duration == track.duration && releaseYear == track.releaseYear;
 }
 
 void printAudioFileInfo(const AudioFile& audioFile)

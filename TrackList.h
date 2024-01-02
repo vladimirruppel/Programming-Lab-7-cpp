@@ -25,4 +25,6 @@ public:
     void removeTrackByIndex(int index);
     void display();
     TrackList operator+(const AudioFile& audioFile) const;
+    bool contains(const std::string& trackName) const;
+    bool contains(const AudioFile& audioFile) const;
 };
