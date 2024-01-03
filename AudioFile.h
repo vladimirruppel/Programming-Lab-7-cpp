@@ -37,5 +37,5 @@ public:
     std::string getTrackName() const;
     int getDuration() const;
     int getReleaseYear() const;
-    bool operator==(const AudioFile& track);
+    bool operator==(const AudioFile& track) const;
 };

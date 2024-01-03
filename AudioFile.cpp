@@ -62,9 +62,9 @@ int AudioFile::getReleaseYear() const
     return releaseYear;
 }
 
-bool AudioFile::operator==(const AudioFile& track)
+bool AudioFile::operator==(const AudioFile& track) const
 {
-    return artistName == track.artistName && trackName == track.trackName && duration == track.duration && releaseYear == track.releaseYear;
+    return (artistName == track.artistName && trackName == track.trackName && duration == track.duration && releaseYear == track.releaseYear);
 }
 
 void printAudioFileInfo(const AudioFile& audioFile)
